@@ -5,6 +5,6 @@ using namespace std;
 
 int main()
 {
-    //TODO
+    printf(());
     return 0;
 }
