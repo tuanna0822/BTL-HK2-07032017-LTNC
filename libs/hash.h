@@ -6,16 +6,7 @@
 #include <iostream>
 
 
-// a small class for calculating HASHING hashes of strings or byte arrays
-// it is not meant to be fast or secure
-//
-// usage: 1) feed it blocks of uchars with update()
-//      2) finalize()
-//      3) get hexdigest() string
-//      or
-//      HASHING(std::string).hexdigest()
-//
-// assumes that char is 8 bit and int is 32 bit
+
 class HASHING
 {
 public:
