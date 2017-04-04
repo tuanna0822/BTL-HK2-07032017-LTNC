@@ -48,7 +48,7 @@ typedef struct user
     string password;
     string email;
     string dateofbirth;
-    string phoneNum;
+    int phoneNum;
 }user;
 typedef struct BorrowDetail
 {

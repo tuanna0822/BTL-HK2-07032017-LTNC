@@ -39,12 +39,16 @@ void adminscreen()
 }
 void userscreen()
 {
+    string mode;
     //hiện thị ID chức danh
     //giao diện cho admin,cho tùy chọn tìm sách
     system("cls");
     greet();
-    cout<<"TODO"<<endl;
-    system("pause");
+    cout << "WELCOME USER" << endl;
+    cout << "=============" << endl;
+    cout << "Moi ban lua chon tinh nang can xu ly: ";
+    cin >> mode;
+    return userprocess(mode);
 }
 void employeescreen()
 {
