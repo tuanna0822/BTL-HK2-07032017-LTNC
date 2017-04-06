@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1490109118 source:c:\users\nguyen van phi\documents\test2\libs\control.cpp
+	<iostream>
+	<string>
+	<fstream>
+	"hash.h"
+	"control.h"
+	"data.h"
+
+1490100553 c:\users\nguyen van phi\documents\test2\libs\hash.h
+	<cstring>
+	<iostream>
+
+1490106077 c:\users\nguyen van phi\documents\test2\libs\control.h
+	<string>
+	"data.h"
+
+1490113326 c:\users\nguyen van phi\documents\test2\libs\data.h
+	<string>
+
+1490100864 source:c:\users\nguyen van phi\documents\test2\libs\hash.cpp
+	"hash.h"
+	<cstdio>
+
+1490176421 source:c:\users\nguyen van phi\documents\test2\libs\view.cpp
+	"control.h"
+	"view.h"
+	"data.h"
+	<iostream>
+	<windows.h>
+
+1490110997 c:\users\nguyen van phi\documents\test2\libs\view.h
+	"data.h"
+
+1490176362 source:c:\users\nguyen van phi\documents\test2\main.cpp
+	<iostream>
+	"libs\view.h"
+	"libs\control.h"
+	"libs\data.h"
+	<windows.h>
+
+1490176524 source:c:\users\nguyen van phi\documents\test2\libs\data.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+	"data.h"
+	"control.h"
+	"view.h"
+	<cstdio>
+
