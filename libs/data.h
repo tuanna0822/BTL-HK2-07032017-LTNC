@@ -28,8 +28,6 @@ typedef struct book
     string status;
 }book;
 //employee
-#define  male
-#define female 0
 typedef struct Employee
 {
     string employeeID;
@@ -39,7 +37,7 @@ typedef struct Employee
     string Department;
     string dateofbirth;
     string email;
-    int gender;
+    string gender;
 }employee;
 typedef struct user
 {
