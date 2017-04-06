@@ -118,3 +118,61 @@ void userprocess(string mode)
 		system("pause");
 	}
 }
+
+void employeeprocess(string mode)
+{
+	employee tempE;
+	greet();
+	if (mode == "add" || mode == "edit")
+	{
+	    getline(std::cin,tempE.employeeID);//xóa buffer của std::in
+		notifi("moi nhap ID nhan vien:");
+		getline(std::cin,tempE.employeeID);
+		notifi("moi nhap ten nhan vien:");
+		getline(std::cin,tempE.Name);
+		notifi("moi nhap bo phan lam viec nhan vien:");
+		getline(std::cin,tempE.Department);
+		notifi("moi nhap email nhan vien:");
+		getline(std::cin,tempE.email);
+		notifi("moi nhap ngay sinh nhan vien:");
+		getline(std::cin,tempE.dateofbirth);
+		notifi("moi nhap dia chi nhan vien:");
+		getline(std::cin,tempE.address);
+		notifi("moi nhap so dien thoai nhan vien:");
+		getline(std::cin,tempE.phoneNum);
+		notifi("moi nhap gioi tinh nhan vien:");
+		getline(std::cin,tempE.gender);
+
+		ofstream file;
+		file.open((employeedir + tempE.employeeID + ".csv").c_str());
+		file << tempE.employeeID << "," << tempE.Name << "," << tempE.Department << "," << tempE.email << "," << tempE.dateofbirth << "," << tempE.address << "," << tempE.phoneNum << "," << tempE.gender;
+		file.close();
+		notifi("da thao tac thanh cong!");
+	}
+	if (mode == "delete")
+	{
+		string employeeID;
+		notifi("moi nhap ID nhan vien can xoa:");
+		cin >> employeeID;
+		if (remove((employeedir + employeeID + ".csv").c_str()) == 0)
+			notifi("da xoa thanh cong sach");
+		else
+			notifi("khong the xoa sach,xin vui long thu lai!");
+	}
+	if (mode == "view")
+	{
+		string employeeID;
+		notifi("moi nhap ID nhan vien can xem!");
+		cin >> employeeID;
+		ifstream file;
+		file.open((employeedir + employeeID + ".csv").c_str(),ios::in);
+		string data, messenges[] = { "ID nhan vien:","ten nhan vien:","bo phan lam viec:","email nhan vien:","ngay sinh nhan vien:","dia chi nhan vien:","so dien thoai nhan vien:","gioi tinh:" };
+		for (int i = 0;i < 8;i++)
+		{
+			getline(file, data, ',');
+			notifi(messenges[i]);
+			cout << data<<endl;
+		}
+		system("pause");
+	}
+}
